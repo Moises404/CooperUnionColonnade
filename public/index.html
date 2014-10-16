@@ -4,14 +4,15 @@
 
 	<!-- STYLESHEET -->
 	<meta name="google-site-verification" content="ylnvTo0uhdkxG9LdmXSmfg2a3rsBq5XNdiBykVhAMmk" />
+	<link rel="chrome-webstore-item" href="https://chrome.google.com/webstore/detail/opdamjfadobkhglnjgiehhackhmgfgei">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 <body>
-
+	<a href="javascript:chrome.webstore.install();">Install me</a>
 	<!-- body; the button element that is used to invoke inline installation -->
-	<button onclick="" id="install-button" style="padding: 0;background: none;height: 61px;vertical-align: middle;cursor:pointer;">
+	<!-- <button onclick="" id="install-button" style="padding: 0;background: none;height: 61px;vertical-align: middle;cursor:pointer;">
 	    <img src="https://www.webrtc-experiment.com/images/btn-install-chrome-extension.png" alt="Add to Chrome">
-	</button>
+	</button> -->
 
 	<section id="scene"></section>
 
@@ -28,25 +29,25 @@
 	
 
    <script>
-       document.querySelector('#install-button').onclick = function() {
-           !!navigator.webkitGetUserMedia 
-               && !!window.chrome 
-               && !!chrome.webstore 
-               && !!chrome.webstore.install && 
-           chrome.webstore.install(
-               'https://chrome.google.com/webstore/detail/opdamjfadobkhglnjgiehhackhmgfgei', 
-               successCallback, 
-               failureCallback
-           );
-       };
+       // document.querySelector('#install-button').onclick = function() {
+       //     !!navigator.webkitGetUserMedia 
+       //         && !!window.chrome 
+       //         && !!chrome.webstore 
+       //         && !!chrome.webstore.install && 
+       //     chrome.webstore.install(
+       //         'https://chrome.google.com/webstore/detail/opdamjfadobkhglnjgiehhackhmgfgei', 
+       //         successCallback, 
+       //         failureCallback
+       //     );
+       // };
 
-       function successCallback() {
-           location.reload();
-       }
+       // function successCallback() {
+       //     location.reload();
+       // }
 
-       function failureCallback(error) {
-       		console.log('ERROROROROR');
-           	alert(error);
+       // function failureCallback(error) {
+       // 		console.log('ERROROROROR');
+       //     	alert(error);
        }
    </script>
 
