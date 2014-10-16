@@ -31,31 +31,6 @@
 
 	</div>
 
-	
-
-  <script src="//cdn.webrtc-experiment.com/getScreenId.js"></script>
-
-  <video controls autoplay style="max-width:100%"></video><br />
-  <button id="capture-screen">Capture Screen</button>
-  <script>
-  document.getElementById('capture-screen').onclick = function() {
-      this.disabled = true;
-
-      getScreenId(function(error, sourceId, screen_constraints) {
-          navigator.getUserMedia = navigator.mozGetUserMedia || navigator.webkitGetUserMedia;
-          navigator.getUserMedia(screen_constraints, function(stream) {
-              document.querySelector('video').src = URL.createObjectURL(stream);
-              stream.onended = function() {
-                  document.querySelector('video').src = null;
-                  document.getElementById('capture-screen').disabled = false;
-              };
-          }, function(error) {
-              console.error(error);
-          });
-      });
-  };
-  </script>
-
 	<!-- JAVASCRIPT -->
 	<script src="js/three.min.js"></script>
 	<script src="js/detector.js"></script>
