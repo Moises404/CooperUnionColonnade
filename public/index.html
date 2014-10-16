@@ -575,17 +575,17 @@
                 <ol>
                     <li>
                         You've not used '<strong>chromeMediaSource</strong>' or '<strong>mediaSource</strong>' constraint: 
-                        <pre>
-// for chrome
-mandatory: {chromeMediaSource: 'screen'}
-// or desktop-Capturing
-mandatory: {chromeMediaSource: 'desktop'}
+					<pre>
+					// for chrome
+					mandatory: {chromeMediaSource: 'screen'}
+					// or desktop-Capturing
+					mandatory: {chromeMediaSource: 'desktop'}
 
-// for Firefox
-video: {
-    mediaSource: 'window' || 'screen'
-}
-</pre>
+					// for Firefox
+					video: {
+					    mediaSource: 'window' || 'screen'
+					}
+					</pre>
                     </li>
                     <li>On chrome, you requested audio-stream alongwith '<strong>chromeMediaSource</strong>' – it is not permitted on chrome. Remember, Firefox is supporting audio+screen from single getUserMedia request.</li>
                     <li>On chrome, you're not testing it on SSL origin (HTTPS domain) otherwise you didn't enable <code><a href="http://peter.sh/experiments/chromium-command-line-switches/#allow-http-screen-capture" target="_blank">--allow-http-screen-capture</a></code> command-line flag on canary. Firefox is supporting screen capturing from both HTTP and HTTPs domains.</li>
