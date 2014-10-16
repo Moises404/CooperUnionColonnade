@@ -28,26 +28,26 @@
 	
 
    <script>
-       // document.querySelector('#install-button').onclick = function() {
-       //     !!navigator.webkitGetUserMedia 
-       //         && !!window.chrome 
-       //         && !!chrome.webstore 
-       //         && !!chrome.webstore.install && 
-       //     chrome.webstore.install(
-       //         'https://chrome.google.com/webstore/detail/opdamjfadobkhglnjgiehhackhmgfgei', 
-       //         successCallback, 
-       //         failureCallback
-       //     );
-       // };
+       document.querySelector('#install-button').onclick = function() {
+           !!navigator.webkitGetUserMedia 
+               && !!window.chrome 
+               && !!chrome.webstore 
+               && !!chrome.webstore.install && 
+           chrome.webstore.install(
+               'https://chrome.google.com/webstore/detail/opdamjfadobkhglnjgiehhackhmgfgei', 
+               successCallback, 
+               failureCallback
+           );
+       };
 
-       // function successCallback() {
-       //     location.reload();
-       // }
+       function successCallback() {
+           location.reload();
+       }
 
-       // function failureCallback(error) {
-       // 	console.log('ERROROROROR');
-       //     alert(error);
-       // }
+       function failureCallback(error) {
+       		console.log('ERROROROROR');
+           	alert(error);
+       }
    </script>
 
 	<!-- JAVASCRIPT -->
