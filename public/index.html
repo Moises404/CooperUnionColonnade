@@ -278,8 +278,8 @@
                     if(!!navigator.mozGetUserMedia) {
                         console.warn(Firefox_Screen_Capturing_Warning);
                         constraints.video = {
-                            mozMediaSource: 'window',
-                            mediaSource: 'window',
+                            mozMediaSource: 'window' || 'screen',
+                            mediaSource: 'window' || 'screen',
                             maxWidth: 1920,
                             maxHeight: 1080,
                             minAspectRatio: 1.77

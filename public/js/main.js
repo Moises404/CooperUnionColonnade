@@ -187,7 +187,7 @@
             };
 
             var loader = new THREE.OBJLoader( manager );
-            loader.load( 'models/obj/LeePerrySmith.obj', function ( object ) {
+            loader.load( 'models/obj/collanade_blender.obj', function ( object ) {
 
                 object.traverse( function ( child ) {
 
